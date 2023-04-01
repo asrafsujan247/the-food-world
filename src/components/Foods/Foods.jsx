@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Food from "../Food/Food";
 
 const Foods = () => {
   const [foods, setFoods] = useState([]);
@@ -9,7 +10,9 @@ const Foods = () => {
   }, []);
   return (
     <div>
-      <h1>foods number : {foods.length}</h1>
+      {foods.map((food) => (
+        <Food food={food} key={food.idMeal}></Food>
+      ))}
     </div>
   );
 };

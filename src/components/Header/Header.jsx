@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <div className="navbar bg-base-100 my-6">
+      <div className="navbar bg-base-100 my-5">
         <div className="flex-1">
           <a className="btn btn-ghost normal-case text-3xl font-bold text-gray-900">
             The Food World
