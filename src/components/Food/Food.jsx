@@ -1,11 +1,11 @@
 import React from "react";
 
 const Food = (props) => {
-  console.log(props.food);
   const { strMealThumb, strMeal, strInstructions } = props.food;
+  const handleFoodCart = props.handleFoodCart;
   return (
     <>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-full h-full border-2 shadow-xl">
         <figure>
           <img src={strMealThumb} alt="" />
         </figure>
@@ -17,7 +17,12 @@ const Food = (props) => {
               ? strInstructions.slice(0, 100) + " ...see more"
               : "not found"}
           </p>
-          <button className="btn btn-link">Add to favorite</button>
+          <button
+            onClick={() => handleFoodCart(props.food)}
+            className="btn btn-link"
+          >
+            Add to favorite
+          </button>
         </div>
       </div>
     </>
